@@ -1,5 +1,9 @@
 cd /home/pi
 
+
+if [ ! -d "/path/to/dir" ] 
+then
+
 pm2 stop c9sdk
 pm2 delete c9sdk
 
@@ -12,3 +16,5 @@ cd /home/pi/YAPP
 pm2 start pi.ecosystem.config.js --only c9sdk
 mkdir -p /home/pi/workspace
 ln -s /home/pi/YAPP /home/pi/workspace/YAPP
+
+fi
