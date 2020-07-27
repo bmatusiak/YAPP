@@ -4,7 +4,7 @@
 # install nvm
 bash ./setup-scripts/install-nvm-node-npm.sh
 
-npm install
+bash ./setup-scripts/install-npm-deps.sh
 
 sudo su - -c "bash /home/pi/YAPP/setup-scripts/install-nvm-node-npm.sh"
 
