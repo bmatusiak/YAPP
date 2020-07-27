@@ -10,7 +10,7 @@ server.on('request', function(request, response) {
     if (
         r.shift() == "pi" &&
         r.shift() == "local" &&
-        r.length == 1 &&
+        r.length >= 1 &&
         request.question[0].type == 1 &&
         request.question[0].class == 1
     ) {
