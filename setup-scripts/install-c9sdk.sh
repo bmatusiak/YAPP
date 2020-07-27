@@ -1,7 +1,7 @@
 cd /home/pi
 
 
-if [ ! -d "/path/to/dir" ] 
+if [ ! -d "/home/pi/c9sdk" ] 
 then
 
 pm2 stop c9sdk
