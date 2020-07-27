@@ -5,4 +5,7 @@ git clone git://github.com/c9/core.git c9sdk
 cd c9sdk
 scripts/install-sdk.sh
 cd /home/pi/YAPP
+
+pm2 stop c9sdk
+pm2 delete c9sdk
 pm2 start pi.ecosystem.config.js --only c9sdk
