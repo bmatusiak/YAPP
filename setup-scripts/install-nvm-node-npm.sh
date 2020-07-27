@@ -1,4 +1,4 @@
-wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh -o nvm-install.sh
+wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh -O nvm-install.sh
 
 sudo bash nvm-install.sh
 bash nvm-install.sh
