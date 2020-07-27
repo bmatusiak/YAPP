@@ -1,0 +1,19 @@
+{
+  "name": "yapp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "pi.ecosystem.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmatusiak/YAPP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmatusiak/YAPP/issues"
+  },
+  "homepage": "https://github.com/bmatusiak/YAPP#readme"
+}
