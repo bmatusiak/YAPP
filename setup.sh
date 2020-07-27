@@ -12,7 +12,7 @@ bash ./setup-scripts/install-pm2.sh
 sudo env PATH=$PATH:/home/pi/.nvm/versions/node/v10.21.0/bin /home/pi/.nvm/versions/node/v10.21.0/lib/node_modules/pm2/bin/pm2 startup systemd -u pi --hp /home/pi
 
 sudo su - -c "bash /home/pi/YAPP/setup-scripts/install-pm2.sh"
-sudo su - -c "pm2 startup"
+sudo su - -c "bash /home/pi/YAPP/setup-scripts/startup-pm2-services.sh"
 
 bash ./setup-scripts/install-c9sdk.sh
 
