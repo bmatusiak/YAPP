@@ -11,4 +11,7 @@ sudo su - -c "bash /home/pi/YAPP/setup-scripts/install-pm2.sh"
 
 bash ./setup-scripts/install-c9sdk.sh
 
+cd /home/pi/YAPP
+npm install
+
 sudo su - -c "bash /home/pi/YAPP/setup-scripts/install-root-pm2-services.sh"
