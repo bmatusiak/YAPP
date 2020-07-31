@@ -1,5 +1,4 @@
-var hid_vid = 5824;
-var hid_pid = 1158;
+
 
 var hid_map_interface = {
     0: "/dev/hidg0",
@@ -19,19 +18,47 @@ var usbDetect = require('usb-detection'); // to detect insert remove of hid devi
 usbDetect.startMonitoring();
 
 
-usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices() });
-usbDetect.on('remove:' + hid_vid + ':' + hid_pid, function(device) { destroyDevices(); });
-usbDetect.find(hid_vid, hid_pid, function(err, devices) {
-    if (err) return console.log(err);
-    if (devices[0]) {
-        setupDevices();
-    }
-});
+function setup_dev_device(){
+    var hid_vid = 5824;
+    var hid_pid = 1158;
+    usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices() });
+    usbDetect.on('remove:' + hid_vid + ':' + hid_pid, function(device) { destroyDevices(); });
+    usbDetect.find(hid_vid, hid_pid, function(err, devices) {
+        if (err) return console.log(err);
+        if (devices[0]) {
+            console.log("device found, doing device setup")
+            setupDevices(hid_vid, hid_pid);
+        }
+    });
+}
+
+
+function setup_prod_device(){
+    var hid_vid = 7504;
+    var hid_pid = 24828;
+    usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices() });
+    usbDetect.on('remove:' + hid_vid + ':' + hid_pid, function(device) { destroyDevices(); });
+    usbDetect.find(hid_vid, hid_pid, function(err, devices) {
+        if (err) return console.log(err);
+        if (devices[0]) {
+            console.log("device found, doing device setup")
+            setupDevices(hid_vid, hid_pid);
+        }
+    });
+}
+
+setup_prod_device()
+setup_dev_device()
+
+
+// usbDetect.find(function(err, devices) {
+//   console.log(err,devices) 
+// });
 
 var hid_ids_C = 0;
 var savedHID = {};
 
-function setupDevices() {
+function setupDevices(hid_vid, hid_pid) {
     var devices = HID.devices();
 
     for (var i in devices) {
