@@ -21,7 +21,7 @@ usbDetect.startMonitoring();
 function setup_dev_device(){
     var hid_vid = 5824;
     var hid_pid = 1158;
-    usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices() });
+    usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices(hid_vid, hid_pid); });
     usbDetect.on('remove:' + hid_vid + ':' + hid_pid, function(device) { destroyDevices(); });
     usbDetect.find(hid_vid, hid_pid, function(err, devices) {
         if (err) return console.log(err);
@@ -36,7 +36,7 @@ function setup_dev_device(){
 function setup_prod_device(){
     var hid_vid = 7504;
     var hid_pid = 24828;
-    usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices() });
+    usbDetect.on('add:' + hid_vid + ':' + hid_pid, function(device) { setupDevices(hid_vid, hid_pid); });
     usbDetect.on('remove:' + hid_vid + ':' + hid_pid, function(device) { destroyDevices(); });
     usbDetect.find(hid_vid, hid_pid, function(err, devices) {
         if (err) return console.log(err);
