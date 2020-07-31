@@ -1,2 +1,7 @@
 node_modules
 core
+
+
+PI-CA.ca.pem
+local.pi.crt
+local.pi.key
