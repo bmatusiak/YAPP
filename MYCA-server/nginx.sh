@@ -1,12 +1,13 @@
 #/bin/bash 
 
-# $1   #  subdomain 
-# $2   #  domain
+# $1   #  domain
 
 
-if [ "$2" = "c9.local.pi" ]; then
+if [ "$1" = "apps.crp.to" ]; then
+    echo 8888
+elif [ "$1" = "c9.local.pi" ]; then
     echo 8080
-elif [ "$2" = "ca.local.pi" ]; then
+elif [ "$1" = "ca.local.pi" ]; then
     echo 8088
 else
     echo 8000
