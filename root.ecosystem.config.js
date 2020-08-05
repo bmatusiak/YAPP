@@ -10,12 +10,12 @@ module.exports = {
     script: 'index.js'
   },{
     name: "HID-setup",
-    cwd: '/home/pi/YAPP/HID-server',
+    cwd: '/home/pi/YAPP/HID-setup',
     script: 'index.js',
     autorestart : false
   },{
-    name: "HID-server-proxy",
-    cwd: '/home/pi/YAPP/HID-server-proxy',
+    name: "HID-proxy",
+    cwd: '/home/pi/YAPP/HID-proxy',
     script: 'index.js'
   }]
   

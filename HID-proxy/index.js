@@ -141,7 +141,7 @@ function spawn_tee(writePath) {
     });
 
     childProcess.stdout.on('data', (data) => {
-        //console.log(data);
+        //console.log(writePath,data);
     });
 
     childProcess.stderr.on('data', (data) => {
